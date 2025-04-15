@@ -1,27 +1,28 @@
-import { useState, useEffect } from "react";
-import { useContext } from "react";
+import { useState, useEffect, useContext } from "react";
+import { useParams } from "react-router-dom";
 import { CartContext } from "../context/cartContext";
 
 const ItemDetailContainer = () => {
-    const { addToList } = useContext(CartContext)
+    const { id } = useParams ();
+    const { addToList } = useContext(CartContext);
     const [item, setItem] = useState(null);
 
     useEffect(() => {
         const getItem = new Promise((resolve) => {
             setTimeout(() => {
                 const singleItem = {
-                    id: 1,
-                    title: "3 veces por semana",
+                    id,
+                    title: "Producto con id " + id,
                     price: "$50.000",
-                    description: "Ideal para profundizar en la disciplina",
-                    pictureUrl: "imagen2.jpg",
+                    description: "Detalle del producto seleccionado",
                 };
                 resolve(singleItem);
             }, 2000);
         });
-
+    
         getItem.then((data) => setItem(data));
-    }, []);
+    }, [id]);
+    
 
     return (
         <div>
@@ -31,7 +32,6 @@ const ItemDetailContainer = () => {
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
                     <p>Precio: {item.price}</p>
-                    <img src={item.pictureUrl} alt={item.title} width="200" />
                 </div>
             ) : (
                 <p>Cargando...</p>

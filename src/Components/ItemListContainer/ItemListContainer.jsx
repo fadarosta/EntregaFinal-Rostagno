@@ -13,28 +13,28 @@ const ItemListContainer = () => {
                     title: "2 veces por semana",
                     price: "$35.000",
                     description: "Para empezar a conocer la práctica",
-                    pictureUrl: "imagen1.jpg"
+                    pictureUrl: "/img/dosveces.png"
                 },
                 {
                     id: 2,
                     title: "3 veces por semana",
                     price: "$50.000",
                     description: "Ideal para profundizar en la disciplina",
-                    pictureUrl: "imagen2.jpg"
+                    pictureUrl: "/img/tresveces.png"
                 },
                 {
                     id: 3,
                     title: "Pase libre",
                     price: "$70.000",
                     description: "Vas a especializarte en tu estilo preferido",
-                    pictureUrl: "imagen3.jpg"
+                    pictureUrl: "/img/paselibre.png"
                 },
                 {
                     id: 4,
                     title: "Clase de prueba",
                     price: "Gratis",
-                    description: "Consagrarás parte de tu vida a la práctica diaria",
-                    pictureUrl: "imagen4.jpg"
+                    description: "Venís a probar",
+                    pictureUrl: "/img/clasedeprueba.png"
                 }
             ];
 
