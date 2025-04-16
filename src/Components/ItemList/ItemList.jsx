@@ -11,6 +11,7 @@ const ItemList = ({ items }) => {
             {items.map((pack) => (
                 <Item
                     key={pack.id}
+                    id={pack.id}
                     title={pack.title}
                     price={pack.price}
                     description={pack.description}
